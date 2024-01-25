@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+
+  /* Varialbles */
+  --primary-background: hsl(0, 0%, 8%);
+  --secondary-backgorund: hsl(0, 0%, 12%);
+  --primary-text: hsl(0, 0%, 100%);
+  --button: hsl(0, 0%, 20%);
+  --accent: hsl(75, 94%, 57%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+}
+
+.container {
+  background-color: var(--secondary-backgorund);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+#buttons {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#buttons button {
+  width: 80%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--button);
+}
+
+#buttons a:hover,
+#buttons button:hover {
+  background-color: var(--accent);
+  color: black;
+}
+
+button a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 28px;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info .profile-name {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-info .profile-location {
+  margin: 0;
+  padding: 12px;
+
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.tag-line {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    height: 575px;
+    width: 325px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .container {
+    height: 600px;
+    width: 390px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.attribution a {
+  color: var(--accent);
+  text-decoration: none;
+}
